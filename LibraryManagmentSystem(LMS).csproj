@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{693EB871-EB9E-48B5-AEB2-B44CDA9C71B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagmentSystem_LMS_</RootNamespace>
+    <AssemblyName>LibraryManagmentSystem%28LMS%29</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Books\AddEditBooke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\AddEditBooke.Designer.cs">
+      <DependentUpon>AddEditBooke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\BookAvailibilty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\BookAvailibilty.Designer.cs">
+      <DependentUpon>BookAvailibilty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\BookDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\BookDetails.Designer.cs">
+      <DependentUpon>BookDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\BookDetials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Books\BookDetials.Designer.cs">
+      <DependentUpon>BookDetials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\BookInventry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookInventry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Books\BookInventryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\BookInventryReport.Designer.cs">
+      <DependentUpon>BookInventryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\BookReportByCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\BookReportByCategory.Designer.cs">
+      <DependentUpon>BookReportByCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\ListBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\ListBooks.Designer.cs">
+      <DependentUpon>ListBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P2LibraryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>P2LibraryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\AllBooksBorrowed.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllBooksBorrowed.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\AllBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\AllBorrowedBooks.Designer.cs">
+      <DependentUpon>AllBorrowedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\AllCurrentBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\AllCurrentBorrowedBooks.Designer.cs">
+      <DependentUpon>AllCurrentBorrowedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\AllReturnedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\AllReturnedBooks.Designer.cs">
+      <DependentUpon>AllReturnedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\BookBorroweDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookBorroweDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\CurrentBorrowedBooks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrentBorrowedBooks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\ReturnedBooks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnedBooks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\SummaryBoorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\SummaryBoorrowedBooks.Designer.cs">
+      <DependentUpon>SummaryBoorrowedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\UserBorroweReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\UserBorroweReport.Designer.cs">
+      <DependentUpon>UserBorroweReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\UserOverDuedate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\Reports\UserOverDuedate.Designer.cs">
+      <DependentUpon>UserOverDuedate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagmentSystemReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryManagmentSystemReports.Designer.cs">
+      <DependentUpon>LibraryManagmentSystemReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P2LibraryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>P2LibraryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reportDataSource.cs" />
+    <Compile Include="Services\Borrowing\BookBorrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\BookBorrowing.Designer.cs">
+      <DependentUpon>BookBorrowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\Controls\BorrowedInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\Controls\BorrowedInfoControl.Designer.cs">
+      <DependentUpon>BorrowedInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\BorroweInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\BorroweInfo.Designer.cs">
+      <DependentUpon>BorroweInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Borrowing\ListBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Borrowing\ListBorrow.Designer.cs">
+      <DependentUpon>ListBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Fines\BuyFines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Fines\BuyFines.Designer.cs">
+      <DependentUpon>BuyFines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\LibraryServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\LibraryServices.Designer.cs">
+      <DependentUpon>LibraryServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ReserveBook\ListReserve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\ReserveBook\ListReserve.Designer.cs">
+      <DependentUpon>ListReserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ReserveBook\Reserve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\ReserveBook\Reserve.Designer.cs">
+      <DependentUpon>Reserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ReserveBook\ReservedPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\ReserveBook\ReservedPerson.Designer.cs">
+      <DependentUpon>ReservedPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ReserveBook\WhoReserved.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Services\ReserveBook\WhoReserved.Designer.cs">
+      <DependentUpon>WhoReserved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="User\UserInfoReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserInfoReport.Designer.cs">
+      <DependentUpon>UserInfoReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\AddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\AddEditUser.Designer.cs">
+      <DependentUpon>AddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsGlobal.cs" />
+    <Compile Include="Global\clsUtil.cs" />
+    <Compile Include="Global\clsValidatoin.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\AddEditePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\AddEditePerson.Designer.cs">
+      <DependentUpon>AddEditePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Controls\ctrlPersonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Person\Controls\ctrlPersonCard.Designer.cs">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Controls\ctrlPersonCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Person\Controls\ctrlPersonCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\FindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\FindPerson.Designer.cs">
+      <DependentUpon>FindPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\listPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\listPeople.Designer.cs">
+      <DependentUpon>listPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\ListUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ListUsers.Designer.cs">
+      <DependentUpon>ListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Controls\UserContro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\Controls\UserContro.Designer.cs">
+      <DependentUpon>UserContro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserDetails.Designer.cs">
+      <DependentUpon>UserDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Books\AddEditBooke.resx">
+      <DependentUpon>AddEditBooke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\BookAvailibilty.resx">
+      <DependentUpon>BookAvailibilty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\BookDetails.resx">
+      <DependentUpon>BookDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\BookDetials.resx">
+      <DependentUpon>BookDetials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\BookInventryReport.rdlc" />
+    <EmbeddedResource Include="Books\BookInventryReport.resx">
+      <DependentUpon>BookInventryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\BookReportByCategory.resx">
+      <DependentUpon>BookReportByCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\ListBooks.resx">
+      <DependentUpon>ListBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryManagmentSystemReports.resx">
+      <DependentUpon>LibraryManagmentSystemReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\BookBorrowing.resx">
+      <DependentUpon>BookBorrowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\Controls\BorrowedInfoControl.resx">
+      <DependentUpon>BorrowedInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\BorroweInfo.resx">
+      <DependentUpon>BorroweInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\ListBorrow.resx">
+      <DependentUpon>ListBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\Reports\AllBooksBorrowed.rdlc" />
+    <EmbeddedResource Include="Services\Borrowing\Reports\AllBorrowedBooks.resx">
+      <DependentUpon>AllBorrowedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\Reports\AllCurrentBorrowedBooks.resx">
+      <DependentUpon>AllCurrentBorrowedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\Reports\AllReturnedBooks.resx">
+      <DependentUpon>AllReturnedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\Reports\BookBorrowedReport.rdlc" />
+    <EmbeddedResource Include="Services\Borrowing\Reports\CurrentBorrowedBooks.rdlc" />
+    <EmbeddedResource Include="Services\Borrowing\Reports\ReturnedBooks.rdlc" />
+    <EmbeddedResource Include="Services\Borrowing\Reports\SummaryBoorrowedBooks.resx">
+      <DependentUpon>SummaryBoorrowedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\Reports\UserBorroweReport.resx">
+      <DependentUpon>UserBorroweReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Borrowing\Reports\UserOverDuedate.rdlc" />
+    <EmbeddedResource Include="Services\Borrowing\Reports\UserOverDuedate.resx">
+      <DependentUpon>UserOverDuedate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Fines\BuyFines.resx">
+      <DependentUpon>BuyFines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\LibraryServices.resx">
+      <DependentUpon>LibraryServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ReserveBook\ListReserve.resx">
+      <DependentUpon>ListReserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ReserveBook\Reserve.resx">
+      <DependentUpon>Reserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ReserveBook\ReservedPerson.resx">
+      <DependentUpon>ReservedPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ReserveBook\WhoReserved.resx">
+      <DependentUpon>WhoReserved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserInfo.rdlc" />
+    <EmbeddedResource Include="User\UserInfoReport.resx">
+      <DependentUpon>UserInfoReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\AddEditUser.resx">
+      <DependentUpon>AddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\AddEditePerson.resx">
+      <DependentUpon>AddEditePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Controls\ctrlPersonCard.resx">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Controls\ctrlPersonCardWithFilter.resx">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\FindPerson.resx">
+      <DependentUpon>FindPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\listPeople.resx">
+      <DependentUpon>listPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User\ListUsers.resx">
+      <DependentUpon>ListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Controls\UserContro.resx">
+      <DependentUpon>UserContro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserDetails.resx">
+      <DependentUpon>UserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Books\BookInventry.xsc">
+      <DependentUpon>BookInventry.xsd</DependentUpon>
+    </None>
+    <None Include="Books\BookInventry.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookInventry.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Books\BookInventry.xss">
+      <DependentUpon>BookInventry.xsd</DependentUpon>
+    </None>
+    <None Include="P2LibraryDataSet1.xsc">
+      <DependentUpon>P2LibraryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="P2LibraryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>P2LibraryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="P2LibraryDataSet1.xss">
+      <DependentUpon>P2LibraryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\AllBooksBorrowed.xsc">
+      <DependentUpon>AllBooksBorrowed.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\AllBooksBorrowed.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllBooksBorrowed.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Services\Borrowing\Reports\AllBooksBorrowed.xss">
+      <DependentUpon>AllBooksBorrowed.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\BookBorroweDataSet.xsc">
+      <DependentUpon>BookBorroweDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\BookBorroweDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookBorroweDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Services\Borrowing\Reports\BookBorroweDataSet.xss">
+      <DependentUpon>BookBorroweDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\CurrentBorrowedBooks.xsc">
+      <DependentUpon>CurrentBorrowedBooks.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\CurrentBorrowedBooks.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CurrentBorrowedBooks.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Services\Borrowing\Reports\CurrentBorrowedBooks.xss">
+      <DependentUpon>CurrentBorrowedBooks.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\ReturnedBooks.xsc">
+      <DependentUpon>ReturnedBooks.xsd</DependentUpon>
+    </None>
+    <None Include="Services\Borrowing\Reports\ReturnedBooks.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReturnedBooks.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Services\Borrowing\Reports\ReturnedBooks.xss">
+      <DependentUpon>ReturnedBooks.xsd</DependentUpon>
+    </None>
+    <None Include="User\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="User\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="User\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="P2LibraryDataSet.xsc">
+      <DependentUpon>P2LibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="P2LibraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>P2LibraryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="P2LibraryDataSet.xss">
+      <DependentUpon>P2LibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Hamsad\source\repos\LibraryProject%28LP%29\BussinessLayer\BussinessLayer.csproj">
+      <Project>{38a5f1b2-070c-43be-8da8-aa5056a8cb63}</Project>
+      <Name>BussinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\followers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\occupation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\followers1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+    <None Include="Resources\user-profile.png" />
+    <None Include="Resources\catalog.png" />
+    <None Include="Resources\loan.png" />
+    <None Include="Resources\penalty.png" />
+    <None Include="Resources\schedule.png" />
+    <None Include="Resources\report %281%29.png" />
+    <None Include="Resources\catalog1.png" />
+    <None Include="Resources\penalty1.png" />
+    <None Include="Resources\schedule1.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
